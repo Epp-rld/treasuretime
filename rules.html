@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rules - TreasureTime</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <!-- Vasakul: logo ja bränd -->
+        <div class="navbar-left">
+            <a href="index.html" class="navbar-home-link">
+                <img src="/images/TimeTreasure_CrystalPNG.png" class="logo-small" alt="TreasureTime Logo">
+                <span class="navbar-brand">TreasureTime</span>
+            </a>
+        </div>
+
+        <!-- Keskel lingid -->
+        <div class="navbar-middle">
+            <!-- Only show Home link if not on index.html -->
+            <a href="index.html" class="nav-link" id="nav-link-id">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="rules.html" class="nav-link active">Rules</a> <!-- Active klass = siin lehel olen praegu -->
+        </div>
+    
+        <!-- Paremal: nupud -->
+        <div class="navbar-right">
+            <div id="auth-buttons">
+                <a href="signup.html" class="btn-signup">Sign Up</a>
+                <a href="login.html" class="btn-login">Log In</a>
+            </div>
+        </div>
+
+</div>
+    </nav>
+
+    <!-- Reeglite sektsioon -->
+    <div class="container">
+        <h1 class="title"><span class="gradient-text">TreasureTime</span></h1>
+        <p class="subtitle">How It Works</p>
+
+        <p class="rules-text">
+            Every <strong>Sunday</strong>, each child receives <strong>10 crystals</strong>. Crystals can be <strong>spent</strong> on screen time (1 crystal = 30 minutes) or <strong>earned</strong> by reading books (30 minutes = 1 crystal). Crystals saved at the end of the week can be exchanged for <strong>real pocket money</strong> (€0.50 per crystal)!
+        </p>
+
+        <p class="rules-text">
+            Players <strong>track their activities</strong> by adding or removing crystals when they read or use screens. The app relies on an <strong>honor system</strong> for logging activities correctly.
+        </p>
+
+        <p class="rules-text">
+            At the end of each week, a <strong>report</strong> is generated showing how many crystals were used, earned, or saved. The final <strong>balance determines their pocket money</strong>!
+        </p>
+    </div>
+    
+    <script defer src="session_check.js"></script>
+
+</body>
+</html>

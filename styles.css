@@ -1,0 +1,688 @@
+/* Üldine värviteema */
+body {
+    background-color: #121212;
+    color: #a5a5a5; /* Teksti värv helehall */
+    font-family: 'Poppins', sans-serif;
+}
+/* Navigatsiooniriba */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #222;
+    padding: 0px 40px;
+    height: 80px;
+    min-height: 80px;
+    box-sizing: border-box; /* Tagab, et ei lisa ekstra kõrgust */
+    width: 100%; /* Kogu ekraani laiuses */
+}
+/* Nav-riba vasakpoolne sektsioon: logo ja bränd */
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+/* Nav-riba nupud */
+.navbar .btn {
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    color: #a5a5a5;
+}
+.navbar-brand {
+    font-size: 22px;
+    font-weight: normal;
+    letter-spacing: 0.2mm;
+    background: linear-gradient(45deg, #ff8a00, #e52e71, #4a90e2); /* Gradient kollasest siniseni - brändi värvid */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+        display: inline-block;
+        vertical-align: middle; /* Joondab teksti logoga kokku */
+        line-height: 1; /* Et ei nihkuks paigast */
+        padding-top: 2px; /* Et ei oleks erneval kõrgusel võrreldes teiste lehtedega */
+    }
+/* Nav-riba keskmine sektsioon: lingid */
+.navbar-middle {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+/* Nav-riba lingid */
+.navbar .nav-link {
+    color: #a5a5a5;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+}
+/* Aktiivse lehe märgistus ja linkide hover - roosa */
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+color: #e52e71;
+font-weight: normal;
+opacity: 0.75; /* Silmale mahedam tumedam varjund */
+}
+/* Nav-riba parempoolne sektsioon: nupud */
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Hoiab ühtlast vahet nuppude vahel */
+}
+/* Kui lehel on ainult üks nupp, tagab, et joonduks korralikult */
+.navbar-right a:only-child {
+    margin-left: auto; /* Hoiab ühe nupu korral joonduse paremale */
+}
+/* Nuppude sama laius - Sign Up, Log In ja Log Out */
+.btn-signup,
+.btn-login,
+.btn-logout,
+.btn-dashboard,
+.btn-reset {
+    width: 120px; /* Kõik nupud ühelaiused 120px */
+    height: 43px;
+    text-align: center;
+    display: inline-block;
+}
+/* Meediapäring väiksemate ekraanide jaoks */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+    .navbar-middle {
+        flex-direction: column;
+        gap: 10px;
+        margin: 10px 0;
+    }
+    .navbar-right {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+/* Väike kristallilogo nav-ribal */
+.logo-small {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+    opacity: 0.95; /* Tibake mahedam kui 100% erksus - siin ja mujal */
+}
+
+/* Suur kristall esilehel */
+.crystal-large {
+    width: 250px;
+    margin-top: 30px;
+    opacity: 0.95;
+}
+
+/* Pealehe suur pealkiri */
+.title {
+    font-size: 56px;
+    font-weight: normal;
+    margin-top: 100px;
+    letter-spacing: 0.2mm;
+}
+/* Brändi gradient */
+.gradient-text {
+    background: linear-gradient(45deg, #ff8a00, #e52e71, #4a90e2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+/* Alapealkiri-slogan esilehel */
+.subtitle {
+    font-size: 28px;
+    margin-top: 20px;
+    letter-spacing: 0.2mm;
+}
+/*  NUPUD */
+.btn-signup {
+    background: #666; /* Natuke tumedam helehall */
+    color: #a5a5a5;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    border: 1px solid #a5a5a5;
+    text-decoration: none;
+}
+.btn-signup:hover {
+    background: #a5a5a5;
+    color: #e52e71;
+    border-color: #e52e71;
+    opacity: 0.75;
+}
+.btn-login {
+    background: #222;
+    color: #a5a5a5;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    border: 1px solid #a5a5a5;
+    text-decoration: none;
+}
+.btn-login:hover {
+    background: #a5a5a5;
+    border-color: #52548d;
+    color: #52548d;
+}
+
+/* SIGN UP */
+.signup-title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: normal;
+    margin-top: 50px;
+    letter-spacing: 0.2mm;
+    display: block;
+    background: linear-gradient(45deg, #73037b, #e52e71 80%);
+    opacity: 0.85;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+/* Sign Up ankeet */
+.signup-form {
+    max-width: 400px;
+    margin: 30px auto;
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    letter-spacing: 0.2mm;
+}
+/* Ankeedi väljade nimed */
+.signup-form label {
+    display: block;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    color: #a5a5a5;
+    margin-top: 10px;
+    margin-bottom: 7px;
+}
+/* Sisestusväljad */
+.signup-form .form-control {
+    background: #333;
+    color: #a5a5a5;
+    border: 1px solid #555;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+}
+.signup-form .form-control:focus,
+.signup-form .form-control:hover { /* Kursoriga välja peale liikudes ja klikkides peenike roosa raam */
+    border-color: #e52e71;
+    outline: none;
+    opacity: 0.75;
+}
+/* Placeholder tekst */
+.signup-form .form-control::placeholder {
+    color: #a5a5a5;
+    opacity: 0.5; /* Et ei näeks välja, nagu oleks väljad täidetud, vaid vihjaks, mida vaja kirjutada */
+    font-size: small;
+    letter-spacing: 1px;
+}
+/* Erinevate brauserisätete jaoks */
+.signup-form .form-control:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #a5a5a5;
+}
+/* Sign Up nupu paigutus keskel */
+.btn-signup {
+    display: inline-block; /* Et nupp ei veniks pikaks */
+    margin: 20px auto; /* Paigutus keskele */
+    padding: 8px 15px; /* Nupu suurus */
+    border-radius: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    border: 1px solid #a5a5a5;
+    white-space: nowrap; /* Et tekst ei läheks mitmele reale */
+    min-width: 120px; /* Minimaalne laius */
+    max-width: 150px; /* Maksimaalne laius */
+    text-align: center;
+    display: inline-block;
+}
+  /* Nupukonteineri paigutus lehe keskel */
+.signup-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+/* Teated */
+#message-box {
+    margin-top: 15px;
+    text-align: center;
+}
+/* Veateade */
+.error-message {
+    color: #ff4d4d;
+    background: #330000;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+/* Õnnestumise teade */
+.success-message {
+    color: #4dff4d;
+    background: #003300;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* LOG IN */
+.login-title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: normal;
+    margin-top: 50px;
+    letter-spacing: 0.2mm;
+    opacity: 0.85;
+    display: block;
+    background: linear-gradient(45deg, #9a5fbf, #4a90e2); /* Sinakas toon */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+/* Log In ankeet */
+.login-form {
+    max-width: 400px;
+    margin: 30px auto;
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    letter-spacing: 0.2mm;
+}
+/* Ankeedi väljade nimed */
+.login-form label {
+    display: block;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    color: #a5a5a5;
+    margin-top: 10px;
+    margin-bottom: 7px;
+}
+/* Sisestusväljad */
+.login-form .form-control {
+    background: #333;
+    color: #a5a5a5;
+    border: 1px solid #555;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+}
+.login-form .form-control:focus,
+.login-form .form-control:hover {
+    border-color: #e52e71;
+    outline: none;
+}
+/* Placeholder tekst */
+.login-form .form-control::placeholder {
+    color: #a5a5a5;
+    opacity: 0.5;
+    font-size: small;
+    letter-spacing: 1px;
+}
+/* Log In nupu paigutus lehe keskel */
+.login-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.btn-login {
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    border: 1px solid #a5a5a5;
+    display: inline-block;
+}
+/* DASHBOARD */
+/* Log Out nupp nav-ribal */
+.btn-logout {
+    background: transparent;
+    color: #a5a5a5;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    border: 1px solid #a5a5a5;
+    text-align: center;
+    display: inline-block;
+}
+.btn-logout:hover {
+    background: #222;
+    color: #e52e71;
+    border: 1px solid #e52e71;
+    opacity: 0.75;
+}
+/* Tervitustekst, kasutaja poole nimeliselt pöördudes */
+.welcome-text {
+    text-align: center;
+    font-size: 18px;
+    font-weight: normal;
+    color: #a5a5a5;
+    margin-top: 5px;
+    letter-spacing: 0.2mm;
+}
+/* Dashboardi pealkiri */
+.dashboard-title {
+    font-size: 48px;
+    font-weight: normal;
+    letter-spacing: 0.2mm;
+    margin-top: 30px;
+}
+/* Kristallide konteiner */
+#crystal-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 50px 0;
+}
+/* Kristalli kujutis */
+.crystal-img {
+    width: 60px;
+    transition: transform 0.2s ease-in-out;
+}
+/* Kristalli suurendamine hoveriga */
+.crystal-img:hover {
+    transform: scale(1.1);
+}
+/* Kristallide responsive suuruse muutmine */
+@media (max-width: 600px) {
+    .crystal-img {
+        width: 40px;
+    }
+}
+/* Nuppude konteiner */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.btn-add {
+    background: #222;
+    color: #e52e71;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 32px;
+    text-decoration: none;
+    width: 80px;
+    height: 50px;
+    opacity: 0.75;
+    border: 1px solid #e52e71;
+    padding: 0;
+    display: flex;
+}
+.btn-add:hover {
+    background: linear-gradient(90deg, #ff8a00, #e52e71); /* Gradient kollasest roosani "+"-nupul */
+    color: #e52e71;
+    border: 1px solid #e52e71;
+}
+.btn-remove {
+    background: #222;
+    color: #52548d;
+    padding: 0;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 32px;
+    text-decoration: none;
+    width: 80px;
+    height: 50px;
+    opacity: 0.75;
+    border: 1px solid #52548d;
+    display: flex;
+}
+.btn-remove:hover {
+    background: linear-gradient(90deg, #e52e71, #4a90e2); /* Gradient roosast siniseni "-"-nupul */
+    color: #52548d;
+    border: 1px solid #52548d;
+}
+/* Et nupud oleksid ühesugused */
+.btn-add,
+.btn-remove {
+    width: 120px;
+    text-align: center;
+    display: inline-block;
+    min-width: 120px;
+    max-width: 150px;
+    margin: 8px;
+}
+/* Raporti loomise nupp */
+.btn-report {
+    background: #222;
+    color: #a5a5a5;
+    border-radius: 30px;
+    font-weight: bold;
+    border: 1px solid #a5a5a5;
+    width: 200px;
+    padding: 12px 24px;
+    height: 50px;
+    white-space: nowrap; /* Et tekst ei läheks mitmele reale */
+    text-align: center;
+    display: inline-block;
+    min-width: 160px;
+    max-width: 250px;
+    width: auto;
+}
+.btn-report:hover {
+    background: #222;
+    color: #e65a04;
+    border: 1px solid #e65a04;
+    opacity: 0.75;
+}
+
+/* RAPORT */
+/* Raporti lehe pealkiri */
+.report-title {
+    font-size: 48px;
+    font-weight: normal;
+    margin-top: 20px;
+    letter-spacing: 0.2mm;
+}
+/* Alapealkiri */
+.report-subtitle {
+    font-size: 28px;
+    color: #a5a5a5;
+    margin-bottom: 20px;
+    letter-spacing: 0.2mm;
+    margin-top: 20px;
+    font-weight: normal;
+}
+/* Andmete loetelu */
+.report-data {
+    font-size: 20px;
+    color: #a5a5a5;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    line-height: 1cm;
+}
+/* Nuppude konteiner */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 0px;
+}
+/* Reset e loendi lähtestamise nupp */
+.btn-reset {
+    background: #222;
+    color: #e52e71;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    width: 120px;
+    height: 40px;
+    border: 1px solid #e52e71;
+    padding: 10px 20px !important;
+    display: inline-block;
+    opacity: 0.75;
+}
+.btn-reset:hover {
+    background: #a5a5a5;
+    color: #e52e71;
+    border: 1px solid #e52e71;
+}
+/* Tagasi Dashboardile viiv nupp */
+.btn-dashboard {
+    background: #222;
+    color: #52548d;
+    padding: 10px 20px !important;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    width: 120px;
+    height: 40px;
+    border: 1px solid #52548d;
+    display: inline-block;
+}
+.btn-dashboard:hover {
+    background: #a5a5a5;
+    color: #52548d;
+    border: 1px solid #52548d;
+}
+/* Et nupud oleksid ühesugused */
+.btn-dashboard,
+.btn-reset {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ABOUT */
+.container {
+    max-width: 800px; /* Et tekst ei läheks liiga laiaks */
+    margin: 50px auto; /* Ruum külgedele */
+    text-align: center;
+    padding: 20px;
+}
+.about-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 0px;
+    letter-spacing: 0.2mm;
+    margin-top: 1px;
+}
+/* Põhipealkiri gradiendis */
+.title {
+    font-size: 48px;
+    font-weight: normal;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    letter-spacing: 0.2mm;
+}
+/* Alapealkiri */
+.subtitle {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    letter-spacing: 0.2mm;
+}
+/* Tekstiosa, rakenduse lühikirjeldus */
+.about-text {
+    font-size: 18px;
+    line-height: 1.6; /* Parema loetavuse huvides */
+    color: #a5a5a5;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+/* RULES e reeglite leht */
+.container {
+    max-width: 800px; /* Et tekst ei valguks liiga laiaks */
+    margin: 50px auto;
+    text-align: center;
+    padding: 20px;
+}
+/* Põhipealkiri */
+.title {
+    font-size: 48px;
+    font-weight: normal;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    letter-spacing: 0.2mm;
+}
+/* Alapealkiri */
+.subtitle {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    letter-spacing: 0.2mm;
+}
+/* Reeglite tekstiosa */
+.rules-text {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #a5a5a5;
+    text-align: center;
+    margin-bottom: 20px;
+}
+/* Home-nupu peitmine avalehel */
+.index-page .home-link {
+    visibility: hidden;
+    pointer-events: none;
+    display: inline-block;
+    width: 70px;
+}
+.navbar-home-link {
+    text-decoration: none; /* Et lingi alla ei tekiks joont */
+        display: flex;
+        align-items: center; /* Logo ja tekst samal tasandil */
+        text-decoration: none;
+    }
+/* Sign Up nupu peitmine Sign Up lehe nav-ribal */
+.signup-page .navbar-right .btn-signup {
+    display: none;
+}
+
+/* Log In nupu peitmine Log In lehe nav-ribal */
+.login-page .navbar-right .btn-login {
+    display: none;
+}
+
+.logout-text {
+    font-size: 40px;
+    background: linear-gradient(45deg, #ff8a00, #e52e71, #4a90e2);
+    text-align: center;
+    margin-top: 150px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#auth-buttons a {
+    margin-right: 20px;
+    align-items: center;
+    gap: 20px !important; /* Hoiab ühtlast vahet nuppude vahel */
+}
+
+#btn-logout a {
+    margin-right: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 20px !important; /* Hoiab ühtlast vahet nuppude vahel */
+}
+
+#auth-buttons a:last-child { 
+    margin-right: 0; /* Removes margin from the last button */ 
+}
+
+#auth-buttons { 
+    display: inline-block; 
+    gap: 20px !important;
+}
+
+
+/* #btn-dashboard a {
+    margin-right: 20px;
+    display: inline-block;
+    align-items: center;
+    align-self: center;
+    gap: 20px !important; /* Hoiab ühtlast vahet nuppude vahel */
+/*} */
