@@ -61,11 +61,20 @@ To make it suitable as a real habit-forming app, future improvements would inclu
 
 Screenshots are available in the `/screenshots` folder:
 
-- Home page
-- Log In page
-- Rules page
-- Dashboard view
-- Weekly Report page
+### Home Page
+![Home Page](screenshots/home-page.png)
+
+### Login Page
+![Login Page](screenshots/log-in-page.png)
+
+### Dashboard
+![Dashboard](screenshots/dashboard.png)
+
+### Rules Page
+![Rules Page](screenshots/rules.png)
+
+### Weekly Report
+![Weekly Report](screenshots/weekly-report.png)
 
 ---
 
