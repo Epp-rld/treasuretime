@@ -95,3 +95,5 @@ Student project — functional prototype.
 Future development planned.
 
   ---
+
+Last updated: <2 December 2025>
